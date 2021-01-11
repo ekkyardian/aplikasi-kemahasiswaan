@@ -47,7 +47,7 @@
     $conn = mysqli_connect("localhost", "root", "");
     mysqli_select_db($conn, "kemahasiswaan");
 
-    $sql = mysqli_query($conn, "SELECT * FROM mahasiswa");
+    $sql = mysqli_query($conn, "SELECT * FROM mahasiswa WHERE npm = '".$_GET['npm']."'");
     $data_mahasiswa = mysqli_fetch_array($sql)
     ?>
         <table>
